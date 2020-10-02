@@ -1,0 +1,206 @@
+@import "../../styles/partials/global";
+
+.upload {
+  &__heading {
+    text-align: start;
+    margin: 50px 0 40px 0;
+    padding: 0 5%;
+    font-size: 40px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: $offWhite;
+    margin: 30px auto;
+    padding: 30px 5%;
+    width: 75%;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+  }
+
+  &__input {
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    border: 1.5px solid $silver;
+    border-radius: 10px;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: $stockBlack;
+    &:focus {
+      transition: 0.15s ease-in;
+      border-color: $appRed;
+    }
+  }
+
+  &__textarea {
+    height: 100px;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  &__image-wrapper input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  &__btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    margin: 20px 5px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    background: $stockWhite;
+    color: $stockBlack;
+    border: 1.5px solid $appOffRed;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__image-btn {
+    background: $stockBlack;
+    color: $stockWhite;
+    border: none;
+  }
+
+  &__btn-cancel {
+    background: $appRed;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $stockWhite;
+  }
+
+  &__modal {
+    height: 200px;
+    width: 70%;
+    padding: 0 16px;
+    background: $stockWhite;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+    outline: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &__modal-heading {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  &__modal-btn {
+    width: 100px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    outline: none;
+    background: $stockWhite;
+    border: 1.5px solid $appOffRed;
+    cursor: pointer;
+  }
+}
+
+@include tablet {
+  .upload {
+    &__heading {
+      font-size: 56px;
+      padding: 0 7%;
+    }
+
+    &__form {
+      padding: 30px 3.125%;
+      margin: 0 auto;
+    }
+
+    &__input {
+      font-size: 20px;
+    }
+
+    &__btn-wrapper {
+      width: 70%;
+    }
+
+    &__btn {
+      font-size: 18px;
+      margin: 20px 20px;
+    }
+
+    &__modal {
+      width: 50%;
+    }
+
+    &__modal-heading {
+      font-size: 32px;
+    }
+
+    &__modal-btn {
+      width: 150px;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+}
+
+@include desktop {
+  .upload {
+    &__heading {
+      margin: 70px 0;
+      font-size: 48px;
+      padding: 0 15%;
+    }
+
+    &__form {
+      margin: 0 auto;
+      width: 50%;
+      padding: 70px 3.125%;
+    }
+
+    &__input {
+      width: 70%;
+      font-size: 16px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      margin: 20px 20px;
+    }
+
+    &__modal-btn {
+      font-size: 14px;
+    }
+  }
+}

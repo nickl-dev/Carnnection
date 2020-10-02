@@ -1,0 +1,189 @@
+@import "../../styles/partials/global";
+
+.post {
+  margin: 35px auto;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $appRed;
+    color: $stockWhite;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__avatarText {
+    display: flex;
+  }
+
+  &__header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+  }
+
+  &__car {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__date {
+    margin: 0;
+    font-size: 14px;
+    color: $silver;
+  }
+
+  &__deleteIcon {
+    color: $stockBlack;
+  }
+
+  &__modal {
+    height: 200px;
+    width: 70%;
+    padding: 0 16px;
+    background: $stockWhite;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+    outline: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &__modal-heading {
+    margin: 0;
+    font-size: 24px;
+  }
+  &__modal-buttonWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__modal-button {
+    width: 100px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    outline: none;
+    background: $stockWhite;
+    border: 1.5px solid $appOffRed;
+    cursor: pointer;
+    &:nth-child(1) {
+      background: $appRed;
+      color: $stockWhite;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  &__likes {
+    display: flex;
+    width: 70px;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  &__description {
+    margin: 10px 0;
+  }
+
+  &__likes-icon {
+    color: $stockBlack;
+    margin-right: 16px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@include tablet {
+  .post {
+    width: 97%;
+    border-radius: 30px;
+
+    &__header {
+      justify-content: space-between;
+      padding: 20px 3.125%;
+    }
+
+    &__header-text {
+      margin-left: 10px;
+    }
+
+    &__car {
+      font-size: 20px;
+    }
+
+    &__modal {
+      width: 600px;
+      padding: 0;
+    }
+
+    &__modal-heading {
+      font-size: 32px;
+    }
+
+    &__modal-button {
+      width: 150px;
+      height: 50px;
+      font-size: 18px;
+    }
+
+    &__footer {
+      padding: 15px 50px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+}
+
+@include desktop {
+  .post {
+    margin: 70px 0;
+
+    &__car {
+      font-size: 16px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__modal-button {
+      font-size: 14px;
+    }
+  }
+}
